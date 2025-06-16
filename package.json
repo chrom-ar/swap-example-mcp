@@ -1,0 +1,48 @@
+{
+  "name": "mpc-swap-example",
+  "version": "1.0.0",
+  "description": "MCP server for VeloraDEX EVM swap transactions",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "mcp-swap-example": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 dist/index.js",
+    "dev": "tsx src/index.ts",
+    "start": "npm run build && node dist/index.js",
+    "test": "npm run build && vitest run",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "mcp",
+    "velora",
+    "veloradex",
+    "swap",
+    "blockchain",
+    "defi",
+    "model-context-protocol"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@chrom-ar/mcp-base": "1.0.0-alpha.2",
+    "@chrom-ar/utils": "0.1.4",
+    "@velora-dex/sdk": "8.1.0",
+    "agents": "0.0.95",
+    "axios": "1.10.0",
+    "dotenv": "16.5.0",
+    "viem": "2.31.2",
+    "zod": "3.25.64"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.1",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3",
+    "vitest": "3.2.3",
+    "wrangler": "^4.20.0"
+  },
+  "overrides": {
+    "zod": "3.25.64"
+  }
+}
